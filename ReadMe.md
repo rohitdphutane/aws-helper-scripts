@@ -6,8 +6,7 @@ This repository contains a collection of helper scripts for AWS Developers and D
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Installation
 
