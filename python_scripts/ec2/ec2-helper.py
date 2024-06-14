@@ -119,20 +119,22 @@ def list_instances():
             instance_state = instance['State']['Name']
             print(f"Instance ID: {instance_id}, State: {instance_state}")
 
-# Example usage
-create_instance()
-list_instances()
+def main():
+    # Example usage
+    instance_id = 'your-instance-id'  # Replace with the instance ID you want to work with
+    image_name = 'your-image-name'  # Replace with the desired image name
+    key_name = 'your-key-name'  # Replace with the desired key pair name
 
-# Call other functions as needed
-instance_id = 'your-instance-id'  # Replace with the instance ID you want to work with
-image_name = 'your-image-name'  # Replace with the desired image name
-key_name = 'your-key-name'  # Replace with the desired key pair name
+    create_instance()
+    list_instances()
+    describe_instance(instance_id)
+    reboot_instance(instance_id)
+    create_image(instance_id, image_name)
+    create_key_pair(key_name)
+    start_instance(instance_id)
+    stop_instance(instance_id)
+    terminate_instance(instance_id)
+    list_instances()
 
-describe_instance(instance_id)
-reboot_instance(instance_id)
-create_image(instance_id, image_name)
-create_key_pair(key_name)
-start_instance(instance_id)
-stop_instance(instance_id)
-terminate_instance(instance_id)
-list_instances()
+if __name__ == "__main__":
+    main()
